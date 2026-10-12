@@ -1,0 +1,289 @@
+/* Configuração geral */
+h1 {
+    color: #a52b64;
+    font-family: Arial, sans-serif;
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h2{
+   box-sizing: border-box; 
+}
+
+body{
+  margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fff0f5;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+/* Cabeçalho */
+header {
+    background-color: #d615d6a4;
+    padding: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .nome {
+    margin: 0;
+    color: #ff9ac4;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* Menu */
+nav {
+   display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+nav a {
+    color: #ff9ac4;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover,
+nav a[aria-current="page"] {
+    text-decoration: underline;
+}
+
+/* Conteúdo principal */
+ main {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    flex: 1;
+}
+
+/* Títulos */
+h1 {
+    color: #a52b64;
+    font-family: Arial, sans-serif;
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #a52b64;
+    font-size: 22px;
+}
+
+p {
+    line-height: 1.7;
+}
+
+.introducao {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+/* Página inicial */
+
+.apresentacao {
+    min-height: 65vh;
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.apresentacao h1 {
+    font-size: clamp(32px, 6vw, 56px);
+    margin-top: 0;
+}
+
+.apresentacao p {
+    max-width: 600px;
+    font-size: 20px;
+}
+
+.tecnologias {
+    font-size: 14px;
+    color: #555;
+}
+
+.apresentacao .tecnologias {
+    color: #a52b64;
+    font-weight: bold;
+}
+
+/* Botões */
+.botao,
+.contato {
+    display: inline-block;
+    background-color: #a52b64;
+    color: white;
+    padding: 14px 24px;
+    border-radius: 12px;
+    text-decoration: none;
+    margin-top: 16px;
+    transition: background-color 0.2s;
+}
+
+.botao:hover,
+.contato:hover {
+    background-color: #7c204b;
+}
+
+
+/* Páginas Projetos e Dicas */
+  .projetos,
+  .dicas {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+/* Cartões */
+.card {
+    background-color: white;
+    border: 2px solid #f5b2cf;
+    border-radius: 18px;
+    padding: 24px;
+    box-shadow: 0 4px 12px #0000000d;
+    overflow-wrap: anywhere;
+}
+
+.card h2 {
+    margin-top: 0;
+}
+
+.card p{
+     line-height: 1.7;
+}
+
+.card a {
+    color: #a52b64;
+    font-weight: bold;
+}
+
+.status {
+  display: inline-block;
+    background-color: #fce4ef;
+    color: #8a2452;
+    border-radius: 20px;
+    padding: 8px 12px;
+    font-size: 14px;
+
+}
+
+/* Página Sobre */
+
+.sobre {
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 40px 0;
+}
+
+.foto {
+     width: 250px;
+    height: 250px;
+    object-fit: cover;
+    object-position: center 65%;
+    border-radius: 50%;
+    border: 5px solid #f5b2cf;
+    flex-shrink: 0;
+}
+
+.texto {
+    max-width: 600px;
+    min-width: 0;
+}
+
+.texto p {
+    line-height: 1.8;
+}
+
+/* Rodapé */
+ 
+footer {
+    background-color: #292029;
+    color: white;
+    text-align: center;
+    padding: 24px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Destaque ao navegar com o teclado */
+
+a:focus-visible {
+    outline: 3px solid #a52b64;
+    outline-offset: 5px;
+}
+header a:focus-visible,
+footer a:focus-visible {
+    outline-color: #ff9ac4;
+}
+
+/* Tablets */
+
+@media (max-width: 850px) {
+    .projetos,
+    .dicas {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Celulares e telas menores */
+  @media (max-width: 700px) {
+header,
+nav{
+ justify-content: center;
+}
+
+
+  .nome {
+        text-align: center;
+    }
+
+      .sobre {
+        flex-direction: column;
+        text-align: center;
+    }
+
+      .foto {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+  @media (max-width: 550px) {
+    .projetos,
+    .dicas {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+     .apresentacao p {
+        font-size: 18px;
+    }
+
+  nav {
+        gap: 16px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+  }
